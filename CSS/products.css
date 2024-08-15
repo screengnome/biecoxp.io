@@ -622,12 +622,13 @@ footer {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 50px;
+        height: 80px;
         overflow: hidden;
     }
     .note p {
         font-size: 14px;
         width: 85%;
+        text-align: center;
     }
     /* FOOTER */
     .footer_info_1 {
