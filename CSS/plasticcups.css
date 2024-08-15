@@ -1,0 +1,907 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full viewport height layout */
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Flexbox for body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 21, 41);
+    color: #fff;
+    width: 100%;
+    padding: 30px;
+}
+
+.business_logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 65px;
+    /*background-color: blueviolet;*/
+    margin-left: 5%;
+}
+
+.business_logo_container a {
+    outline: none;
+    text-decoration: none;
+}
+
+.main_logo {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 65px;
+    margin-right: 5%;
+    /*background-color: chartreuse;*/
+}
+
+/* Home Button */
+
+.links1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    /*background-color: red;*/
+}
+
+.links1 a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.link_bar1 {
+    background-color: rgb(94, 183, 255);
+    height: 4px;
+    width: 0%;
+    margin-top: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.links1:hover {
+    cursor: pointer;
+    background-color: rgb(0, 17, 32);
+}
+
+.links1:hover a {
+    color: rgb(94, 183, 255);
+}
+
+.links1:hover .link_bar1 {
+    width: 45%;
+    background-color: rgb(94, 183, 255);
+}
+
+/* Products Button */
+
+.links2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    /*background-color: red;*/
+}
+
+.links2 a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.link_bar2 {
+    background-color: rgb(94, 183, 255);
+    height: 4px;
+    width: 0%;
+    margin-top: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.links2:hover {
+    cursor: pointer;
+    background-color: rgb(0, 17, 32);
+}
+
+.links2:hover a {
+    color: rgb(94, 183, 255);
+}
+
+.links2:hover .link_bar2 {
+    width: 60%;
+    background-color: rgb(94, 183, 255);
+}
+
+/* Contact Button */
+
+.links3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    /*background-color: red;*/
+}
+
+.links3 a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.link_bar3 {
+    background-color: rgb(94, 183, 255);
+    height: 4px;
+    width: 0%;
+    margin-top: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.links3:hover {
+    cursor: pointer;
+    background-color: rgb(0, 17, 32);
+}
+
+.links3:hover a {
+    color: rgb(94, 183, 255);
+}
+
+.links3:hover .link_bar3 {
+    width: 55%;
+    background-color: rgb(94, 183, 255);
+}
+
+/* About */
+
+.links4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100px;
+    /*background-color: red;*/
+}
+
+.links4 a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.link_bar4 {
+    background-color: rgb(94, 183, 255);
+    height: 4px;
+    width: 0%;
+    margin-top: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.links4:hover {
+    cursor: pointer;
+    background-color: rgb(0, 17, 32);
+}
+
+.links4:hover a {
+    color: rgb(94, 183, 255);
+}
+
+.links4:hover .link_bar4 {
+    width: 55%;
+    background-color: rgb(94, 183, 255);
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+    width: 15%;
+    height: 65px;
+    cursor: pointer;
+}
+
+.lines {
+    background-color: white;
+    width: 50%;
+    height: 8%;
+    margin: 3%;
+}
+
+.hamburger:hover .lines {
+    background-color: rgb(94, 183, 255);
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 21, 41);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.exit {
+    display: flex;
+    flex-direction: row;
+    /*background-color: red;*/
+    height: 80px;
+    width: 100%;
+}
+
+.exit_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: yellow;*/
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+}
+
+.exit_container p {
+    color: white;
+    font-size: 36px;
+}
+
+.site_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /*background-color: green;*/
+}
+
+.site_links a {
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    font-size:  24px;
+    margin: 35px;
+}
+
+/* CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rippleware_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    width: 100%;
+}
+
+.rippleware_logo img {
+    height: 45%;
+    margin-left: 10%;
+}
+
+.rippleware_description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
+
+.rippleware_description h1 {
+    margin-left: 10%;
+    color: white;
+    font-size: 50px;
+}
+
+.cup_row_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.cup_box {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.cup_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: black;
+    transition: top 0.5s ease-in-out;
+}
+
+.cup_info h3 {
+    color: white;
+    font-size: 28px;
+}
+
+.cup_info p {
+    color: white;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.cup_box:hover .cup_info {
+    top: 0%;
+}
+
+.cup_box img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.qoute {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 0, 136);
+}
+
+.qoute p { 
+    margin-left: 10%;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(0, 21, 41);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerbar {
+    height: 30px;
+    width: 100%;
+}
+
+.footer_info_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    background-color: rgb(0, 21, 41);
+}
+
+.footer_info_1 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    /*background-color: aquamarine;*/
+}
+
+.footer_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 35%;
+    /*background-color: rgb(255, 0, 225);*/
+    padding-left: 30px;
+}
+
+.footer_logo img {
+    height: 50%;
+}
+
+.footer_paragraph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 40%;
+    /*background-color: wheat;*/
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.footer_paragraph p {
+    font-size: 12px;
+    text-align: left;
+}
+
+.social_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    /*background-color: rgb(242, 245, 179);*/
+    padding-left: 30px;
+}
+
+.social_logos {
+    height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    filter: invert(34%) sepia(93%) saturate(2583%) hue-rotate(203deg) brightness(100%) contrast(98%);
+}
+
+.footer_info_2 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    /*background-color: rgb(170, 127, 255);*/
+}
+
+.footer_address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    /*background-color: brown;*/
+    overflow: hidden;
+    padding-left: 50px;
+}
+
+.footer_address_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+    /*background-color: green;*/
+    overflow: hidden;
+}
+
+.footer_address_details p {
+    margin-left: 50px;
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: left;
+    align-items: center;
+}
+
+.footer_info_3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    /*background-color: rgb(170, 127, 255);*/
+}
+
+.footer_contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    /*background-color: brown;*/
+    overflow: hidden;
+}
+
+.footer_contact_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+    /*background-color: green;*/
+    overflow: hidden;
+}
+
+.footer_contact_details p {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: left;
+    align-items: center;
+}
+
+.footer_info_4 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    /*background-color: rgb(170, 127, 255);*/
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    /*background-color: brown;*/
+    overflow: hidden;
+}
+
+.footer_links_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+    /*background-color: green;*/
+    overflow: hidden;
+}
+
+.footer_links_details p {
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: left;
+    align-items: center;
+}
+
+.footer_links_details p a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.rights_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 21, 41);
+    width: 100%;
+    height: 30%;
+}
+
+.rights_container p {
+    color: white;
+    font-size: 14px;
+}
+
+/*////////////////////*/
+/* Responsive Styles */
+/*////////////////////*/
+
+/* Styles for screens up to 480px (small mobile devices) */
+@media (max-width: 480px) {
+    nav {
+        display: none;
+    }
+    .business_logo_container {
+        margin-left: 10%;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .main_logo {
+        height: 40px;
+    }
+    /* CONTENT */
+    .rippleware_logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+        width: 100%;
+    }
+    .rippleware_logo img {
+        height: 40%;
+        margin-left: 0px;
+    }
+    .rippleware_description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 85px;
+        background-color: blue;
+    }
+    .rippleware_description p {
+        font-size: 16px;
+        text-align: center;
+        width: 85%;
+    }
+    .rippleware_description {
+        align-items: center;
+        justify-content: center;
+    }
+    .rippleware_description h1 {
+        margin-left: 0%;
+        font-size: 28px;
+    }
+    .cup_row_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 25px;
+        overflow: hidden;
+    }
+    .cup_box {
+        height: 265px;
+        width: 265px;
+    }
+    .cup_info {
+        top: 0%;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .cup_info h3 {
+        color: white;
+        font-size: 18px;
+    }
+    .cup_info p {
+        color: white;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+    .qoute {
+        justify-content: center;
+        height: 60px;
+    }
+    .qoute p { 
+        margin-left: 0%;
+        color: white;
+        font-size: 12px;
+        width: 85%;
+        text-align: center;
+    }
+    /* FOOTER */
+    .footer_info_1 {
+        width: 100%;
+    }
+    .footer_info_2 {
+        display: none;
+    }
+    .footer_info_3 {
+        display: none;
+    }
+    .footer_info_4 {
+        display: none;
+    }
+    .rights_container p {
+        color: white;
+        font-size: 12px;
+    }
+}
+
+/* Styles for screens between 481px and 768px (larger mobile devices and small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .business_logo_container {
+        margin-left: 10%;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .main_logo {
+        height: 40px;
+    }
+    /* CONTENT */
+    .rippleware_logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+        width: 100%;
+    }
+    .rippleware_logo img {
+        height: 40%;
+        margin-left: 0px;
+    }
+    
+    .rippleware_description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 85px;
+        background-color: blue;
+    }
+    .rippleware_description p {
+        font-size: 16px;
+        text-align: center;
+        width: 85%;
+    }
+    .rippleware_description {
+        align-items: center;
+        justify-content: center;
+    }
+    .rippleware_description h1 {
+        margin-left: 0%;
+        color: white;
+        font-size: 18px;
+    }
+    .cup_row_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 25px;
+        overflow: hidden;
+    }
+    .cup_box {
+        height: 265px;
+        width: 265px;
+    }
+    .cup_info {
+        top: 0%;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .cup_info h3 {
+        color: white;
+        font-size: 18px;
+    }
+    .cup_info p {
+        color: white;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+    .qoute {
+        justify-content: center;
+        height: 50px;
+    }
+    .qoute p { 
+        margin-left: 0%;
+        color: white;
+        font-size: 12px;
+    }
+    /* FOOTER */
+    .footer_info_1 {
+        width: 100%;
+    }
+    .footer_info_2 {
+        display: none;
+    }
+    .footer_info_3 {
+        display: none;
+    }
+    .footer_info_4 {
+        display: none;
+    }
+    .rights_container p {
+        color: white;
+        font-size: 12px;
+    }
+}
+
+/* Styles for screens between 769px and 1024px (tablets like iPads and Kindles) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* CONTENT */
+    .rippleware_logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+        width: 100%;
+    }
+    .rippleware_logo img {
+        height: 40%;
+        margin-left: 0px;
+    }
+    .rippleware_description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 85px;
+        background-color: blue;
+    }
+    .rippleware_description p {
+        font-size: 16px;
+        text-align: center;
+        width: 85%;
+    }
+    .rippleware_description h1 {
+        font-size: 32px;
+    }
+    .cup_box {
+        height: 180px;
+        width: 180px;
+    }
+    .cup_info {
+        top: 0%;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .cup_info h3 {
+        color: white;
+        font-size: 16px;
+    }
+    .cup_info p {
+        color: white;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    /* FOOTER */
+    .footer_address h3 {
+        font-size: 14px;
+    }
+    .footer_contact h3 {
+        font-size: 14px;
+    }
+    .footer_links h3 {
+        font-size: 14px;
+    }
+    .footer_address_details p {
+        font-size: 12px;
+    }
+    .footer_contact_details p {
+        font-size: 12px;
+    }
+    .footer_links_details p {
+        font-size: 12px;
+    }
+    .rights_container p {
+        font-size: 12px;
+    }
+    .footer_logo img {
+        height: 40%;
+    }
+}
