@@ -284,7 +284,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     /*background-color: green;*/
 }
 
@@ -1045,6 +1045,9 @@ footer {
         height: 500px;
     }
     .main_text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 20%;
     }
     .main_text h1{
